@@ -1,0 +1,686 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --azul-principal: #0004ff; /* Seu Azul Elétrico */
+    --azul-glow: rgba(0, 4, 255, 0.6);
+    --bg-profundo: #05050a; /* Fundo quase preto */
+    --bg-card: #0d0d1a; /* Cinza azulado muito escuro */
+    --texto-main: #ffffff;
+    --texto-muted: #8b8b9e;
+    --fonte-tech: 'Orbitron', sans-serif; /* Fonte para títulos */
+    --fonte-corpo: 'Roboto', sans-serif; /* Fonte para textos longos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-profundo);
+    color: var(--texto-main);
+    font-family: var(--fonte-corpo);
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- TÍTULOS PONTUAIS --- */
+.titulo-secao {
+    font-family: var(--fonte-tech);
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.destaque-azul {
+    color: var(--azul-principal);
+    text-shadow: 0 0 15px var(--azul-glow);
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--texto-muted);
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+/* --- HEADER TECH (DIFERENTE DO CAZUM) --- */
+.header-tech {
+    background-color: rgba(5, 5, 10, 0.9);
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 4, 255, 0.2);
+}
+
+.logo-area {
+    font-family: var(--fonte-tech);
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-prefix { color: var(--texto-main); }
+.logo-suffix { 
+    color: var(--azul-principal); 
+    text-shadow: 0 0 10px var(--azul-glow);
+}
+
+.nav-tech ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-tech a {
+    color: var(--texto-muted);
+    font-family: var(--fonte-tech);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-tech a:hover {
+    color: var(--azul-principal);
+    text-shadow: 0 0 10px var(--azul-glow);
+}
+
+/* Botão de contato no menu */
+.btn-contato-head {
+    border: 1px solid var(--azul-principal);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: var(--azul-principal) !important;
+    transition: 0.3s;
+}
+
+.btn-contato-head:hover {
+    background-color: var(--azul-principal);
+    color: white !important;
+    box-shadow: 0 0 20px var(--azul-glow);
+}
+
+/* --- HERO SECTION (DIVIDIDA E MODERNA) --- */
+.hero-split {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px; /* Desconto do header */
+    background: radial-gradient(circle at center, #101025 0%, var(--bg-profundo) 70%);
+}
+
+.hero-text {
+    flex: 1;
+    padding: 0 80px;
+}
+
+.hero-text h1 {
+    font-family: var(--fonte-tech);
+    font-size: 80px;
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    color: var(--texto-main);
+}
+
+.tagline {
+    font-family: var(--fonte-tech);
+    font-size: 14px;
+    color: var(--texto-muted);
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo dos botões futuristas */
+.btn-principal, .btn-secundario {
+    font-family: var(--fonte-tech);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 15px 35px;
+    border-radius: 5px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-principal {
+    background-color: var(--azul-principal);
+    color: white;
+    box-shadow: 0 0 15px var(--azul-glow);
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--azul-glow);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--texto-muted);
+    border: 1px solid rgba(139, 139, 158, 0.3);
+}
+
+.btn-secundario:hover {
+    border-color: var(--texto-main);
+    color: var(--texto-main);
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Área Visual da Direita */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-hero {
+    width: 80%;
+    max-width: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+    /* Efeito geométrico Tech nas bordas */
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    border: 2px solid var(--azul-principal);
+}
+
+/* Brilho atrás da foto */
+.glow-overlay {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-color: var(--azul-principal);
+    filter: blur(100px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* --- SEÇÃO CONECTAR (GRID DE CARDS FANCY) --- */
+.secao-conectar {
+    padding: 100px 0;
+    background-color: #080812;
+    border-top: 1px solid rgba(0, 4, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 4, 255, 0.1);
+}
+
+.grid-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rede-card {
+    background-color: var(--bg-card);
+    width: calc(20% - 16px); /* 5 cards por linha */
+    min-width: 200px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rede-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul-principal);
+    box-shadow: 0 10px 30px rgba(0, 4, 255, 0.2);
+}
+
+.rede-card i {
+    font-size: 40px;
+    color: var(--texto-main);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.rede-card h3 {
+    font-family: var(--fonte-tech);
+    font-size: 16px;
+    color: var(--texto-main);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.rede-card p {
+    font-size: 12px;
+    color: var(--texto-muted);
+}
+
+/* Cores de hover específicas (opcional, senão tudo fica azul) */
+.youtube:hover i { color: #FF0000; text-shadow: 0 0 15px rgba(255,0,0,0.5); }
+.twitch:hover i { color: #9146FF; text-shadow: 0 0 15px rgba(145,70,255,0.5); }
+.kick:hover i { color: #00E701; text-shadow: 0 0 15px rgba(0,231,1,0.5); }
+.tiktok:hover i { color: #FF69B4; text-shadow: 0 0 15px #FF69B4; }
+.discord:hover i { color: #5865F2; text-shadow: 0 0 15px rgba(88,101,242,0.5); }
+
+/* --- SEÇÃO CONTEÚDO (VÍDEO) --- */
+.secao-conteudo {
+    padding: 100px 0;
+}
+
+.video-frame {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+/* Moldura tecnológica ao redor do vídeo */
+.video-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    width: 580px; height: 335px;
+    border: 2px solid var(--azul-principal);
+    border-radius: 15px;
+    box-shadow: 0 0 30px var(--azul-glow);
+    z-index: -1;
+    max-width: calc(100% + 20px);
+}
+
+.video-frame iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* --- FOOTER TECH (DIFERENTE DO CAZUM) --- */
+.footer-tech {
+    background-color: #030307;
+    padding: 80px 0 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 4, 255, 0.2);
+}
+
+.footer-tech h3 {
+    font-family: var(--fonte-tech);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-contato {
+    color: var(--texto-muted);
+    margin-bottom: 20px;
+}
+
+.email-negocio {
+    font-family: var(--fonte-tech);
+    font-size: 20px;
+    color: var(--azul-principal);
+    font-weight: 700;
+    text-shadow: 0 0 15px var(--azul-glow);
+    transition: 0.3s;
+}
+
+.email-negocio:hover {
+    color: white;
+    text-shadow: 0 0 25px var(--azul-glow);
+}
+
+.copyright {
+    margin-top: 60px;
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 2px;
+}
+
+/* --- SEÇÃO DE FORMULÁRIO --- */
+.secao-formulario {
+    padding: 80px 0;
+    background-color: #030307;
+    border-top: 1px solid rgba(0, 4, 255, 0.2);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 4, 255, 0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-family: var(--fonte-tech);
+    font-size: 12px;
+    color: var(--texto-main);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.input-group input, 
+.input-group textarea {
+    background-color: rgba(5, 5, 10, 0.8);
+    border: 1px solid #2a2a35;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--fonte-corpo);
+    font-size: 14px;
+    transition: 0.3s;
+    outline: none;
+}
+
+/* Efeito de brilho azul quando a pessoa clica para digitar */
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 15px rgba(0, 4, 255, 0.3);
+    background-color: rgba(0, 4, 255, 0.05);
+}
+
+/* O botão de Enviar */
+.btn-enviar {
+    width: 100%;
+    background-color: var(--azul-principal);
+    color: white;
+    font-family: var(--fonte-tech);
+    font-weight: 900;
+    font-size: 16px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #0003cc; /* Azul um pouco mais escuro */
+    box-shadow: 0 0 30px var(--azul-glow);
+    transform: translateY(-2px);
+}
+
+/* Mini footer no final de tudo */
+.footer-simples {
+    text-align: center;
+    padding: 20px;
+    background-color: #010103;
+}
+
+/* --- SEÇÃO SOBRE MIM (IDENTIDADE VERIFICADA) --- */
+.secao-sobre {
+    padding: 100px 0;
+    background-color: var(--bg-profundo);
+    /* Um degradê bem sutil para separar do topo */
+    background: linear-gradient(180deg, var(--bg-profundo) 0%, #080812 100%);
+}
+
+.sobre-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap; /* Se a tela for pequena, o texto desce para debaixo da foto */
+}
+
+/* Moldura Futurista da Foto */
+.sobre-visual {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.moldura-tech {
+    position: relative;
+    padding: 15px;
+    border: 1px solid rgba(0, 4, 255, 0.3);
+    background-color: rgba(0, 4, 255, 0.05);
+}
+
+.foto-perfil {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+    transition: 0.5s;
+}
+
+.moldura-tech:hover .foto-perfil {
+    filter: grayscale(0%) contrast(100%); /* Fica com cor normal ao passar o mouse */
+    box-shadow: 0 0 20px var(--azul-glow);
+}
+
+/* Detalhes nos cantos da moldura */
+.detalhe-canto {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--azul-principal);
+}
+
+.top-left {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Área de Texto */
+.sobre-conteudo {
+    flex: 2;
+    min-width: 300px;
+}
+
+.nickname-destaque {
+    font-family: var(--fonte-tech);
+    font-size: 40px;
+    color: var(--texto-main);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Insígnias/Tags */
+.tags-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    font-family: var(--fonte-tech);
+    font-size: 11px;
+    color: var(--azul-principal);
+    border: 1px solid var(--azul-principal);
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(0, 4, 255, 0.05);
+}
+
+/* Caixa de texto simulando um terminal */
+.caixa-texto-tech {
+    background-color: var(--bg-card);
+    border-left: 3px solid var(--azul-principal);
+    padding: 20px 25px;
+    margin-bottom: 30px;
+}
+
+.caixa-texto-tech p {
+    color: var(--texto-muted);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.caixa-texto-tech p:last-child {
+    margin-bottom: 0;
+}
+
+.caixa-texto-tech strong, .caixa-texto-tech em {
+    color: var(--texto-main);
+}
+
+/* Links em formato de botões secundários */
+.links-sobre {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.links-sobre a {
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+.links-sobre i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* --- NOVA LOGO PRINCIPAL EM IMAGEM --- */
+.logo-principal {
+    height: 55px;   /* Altura da logo para caber na barra branca. Ajuste se achar pequena/grande. */
+    width: auto;     /* Deixa a largura automática para manter a proporção da logo */
+    display: block;  /* Ajuda no alinhamento vertical */
+    
+    /* Opcional: Efeito suave ao passar o mouse */
+    transition: opacity 0.3s ease; 
+}
+
+/* Opcional: Efeito de hover */
+.logo-principal:hover {
+    opacity: 0.8; /* Dá uma leve "apagadinha" quando passa o mouse */
+}
+
+/* --- NOVA LOGO REAL DA KICK EM IMAGEM --- */
+.kick-logo-img {
+    height: 40px;   /* Altura da logo para ficar proporcional aos outros ícones */
+    width: auto;     /* Mantém a proporção da logo */
+    margin-bottom: 20px; /* Espaço entre a logo e o texto "KICK" */
+    display: block;  /* Ajuda no alinhamento vertical */
+
+}
+
+/* Efeito de hover na imagem */
+.rede-card.kick:hover .kick-logo-img {
+    filter: drop-shadow(0 0 15px rgba(0, 231, 1, 0.8)); /* Aumenta o brilho verde no hover */
+}
+
+/* --- MOLDURA QUADRADA NEON (SEÇÃO INÍCIO) --- */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.moldura-hero-quadrada {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Define o tamanho máximo do quadrado */
+    aspect-ratio: 1 / 1; /* A mágica que força a div a ser um quadrado perfeito */
+    background-color: rgba(0, 4, 255, 0.02); /* Fundo super suave */
+    
+    /* A borda contínua sem quebras */
+    border: 3px solid var(--azul-principal); 
+    
+    /* O brilho neon (para fora e para dentro da caixa) */
+    box-shadow: 0 0 25px var(--azul-glow), inset 0 0 15px var(--azul-glow); 
+    
+    /* Centraliza a logo dentro do quadrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efeito de acender ainda mais quando passa o mouse */
+.moldura-hero-quadrada:hover {
+    box-shadow: 0 0 45px var(--azul-glow), inset 0 0 25px var(--azul-glow); 
+}
+
+/* Ajuste da logo dentro do quadrado */
+.logo-nk-centro {
+    width: 55%; /* Ocupa 55% do espaço do quadrado. Aumente se quiser a logo maior */
+    height: auto;
+    filter: drop-shadow(0 0 10px var(--azul-glow)); /* Brilho sutil na própria logo */
+    clip-path: none; /* Garante que a imagem não sofra recortes */
+}
+
+/* --- RODAPÉ / FOOTER --- */
+.footer-tech {
+    background-color: #030308; /* Um fundo bem escuro para fechar o site */
+    border-top: 1px solid rgba(0, 4, 255, 0.1); /* Linha sutil separando o rodapé do resto */
+    padding: 30px 0;
+    text-align: center; /* Centraliza tudo */
+    font-family: var(--fonte-tech);
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column; /* Coloca um texto embaixo do outro */
+    gap: 10px; /* Espaçamento entre o email e o copyright */
+}
+
+.email-contato {
+    color: var(--texto-main);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* O link do e-mail com a sua cor azul neon */
+.email-contato a {
+    color: var(--azul-principal);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.email-contato a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--azul-glow);
+}
+
+.copyright-texto {
+    color: var(--texto-muted); /* Cor mais apagadinha, igual a da sua imagem */
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
