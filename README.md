@@ -1,24 +1,29 @@
-🚀 NikoTTRW Official Hub
-Bem-vindo ao repositório oficial do site NikoTTRW. Este projeto foi desenvolvido para centralizar minha presença digital, lives e contatos profissionais.
+<div align="center">
+  <img src="images/logo niko.png" alt="NikoTTRW Logo" width="150">
+  <h1>🚀 NikoTTRW Official Hub</h1>
+  <p><i>Bem-vindo ao repositório oficial do site NikoTTRW. Este projeto foi desenvolvido para centralizar minha presença digital, lives e contatos profissionais.</i></p>
+</div>
 
-🛠️ Tecnologias Utilizadas
-HTML5 & CSS3: Estrutura e estilização com foco em design responsivo e estética Cyberpunk.
+<hr>
 
-Vercel: Hospedagem e deploy contínuo (CI/CD).
+<h3>🌐 Acesse o Site:</h3>
+<p><a href="https://site-niko-ttrw.vercel.app/">https://site-niko-ttrw.vercel.app/</a></p>
 
-GitHub: Versionamento de código.
+<h3>🛠️ Tecnologias</h3>
+<ul>
+  <li><b>Frontend:</b> HTML5 & CSS3 (Estética Cyberpunk)</li>
+  <li><b>Deploy:</b> Vercel</li>
+  <li><b>Formulário:</b> Formspree</li>
+</ul>
 
-Formspree: Processamento seguro de formulários de contato.
+<h3>⚡ Como rodar o projeto</h3>
+<pre>
+1. Clone o repositório
+2. Abra o arquivo index.html
+</pre>
 
-🌐 Link do Projeto
-Acesse o site oficial aqui: https://site-niko-ttrw.vercel.app/
+<hr>
 
-⚡ Como rodar localmente
-Se você deseja contribuir ou estudar o código:
-
-Clone o repositório: git clone https://github.com/SEU_USUARIO/Projeto_SiteTTRW.git
-
-Abra o index.html no seu navegador de preferência.
-
-📬 Contato
-Para parcerias ou publicidade, utilize o formulário disponível no site ou envie um e-mail para ttrwboss@gmail.com.
+<p align="center">
+  <b>Contato Business:</b> <a href="mailto:ttrwboss@gmail.com">ttrwboss@gmail.com</a>
+</p>
