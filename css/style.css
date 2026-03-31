@@ -684,3 +684,33 @@ body {
     letter-spacing: 2px;
     opacity: 0.5;
 }
+
+/* Ajustes para Celular (Telas menores que 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Dá uma folga nas laterais */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Diminui o título principal */
+    }
+
+    /* Se as redes sociais estiverem em linha, coloca uma embaixo da outra */
+    .redes-sociais, .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajusta as imagens para não estourarem a tela */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajusta o formulário para ocupar a largura toda */
+    form input, form textarea {
+        width: 100%;
+    }
+}
